@@ -102,6 +102,22 @@ public class Account {
 	void calcSavDeposit(double amt) {
 		savBal = savBal + amt;
 	}
+
+	void getTransferInput() {
+		System.out.println("\nAccount Balance: " + df.format(savBal));
+		System.out.print("Enter amount to transfer to Current Account: ");
+		double amount = s.nextDouble();
+		
+		if ((savBal - amount) >= 0) {
+			calcSavWithdraw(amount); // Deduct from Savings
+			calcCurrDeposit(amount); // Add to Current
+			System.out.println("\nTransfer Successful!");
+			System.out.println("New Savings Balance: " + df.format(savBal));
+			System.out.println("New Current Balance: " + df.format(currBal));
+		} else {
+			System.out.println("\nInsufficient Balance!");
+		}
+	}
 }
 
 

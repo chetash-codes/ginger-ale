@@ -140,7 +140,8 @@ public class OptionMenu extends Account {
 		System.out.println("1. Check Balance");
 		System.out.println("2. Withdraw Money");
 		System.out.println("3. Deposit Money");
-		System.out.println("4. EXIT");
+		System.out.println("4. Transfer Funds to Current"); // NEW OPTION
+		System.out.println("5. EXIT");
 		System.out.print("Your Choice: ");
 		
 		try {
@@ -160,7 +161,13 @@ public class OptionMenu extends Account {
 				getAccountType();
 				break;
 				
-			case 4:
+
+			case 4: // NEW CASE
+				getTransferInput();
+				getAccountType();
+				break;
+
+			case 5: // CHANGED FROM 4 TO 5
 				System.out.println("\nThank You for using this ATM. \nVISIT AGAIN!");
 				System.out.println("-------------------------------");
 				System.out.println("-------------------------------\n");
