@@ -63,6 +63,12 @@ public class OptionMenu extends Account {
 				break;
 				
 			case 3:
+				System.out.println("\nGenerating Final Receipt...");
+				Transaction t = new Transaction(); // Using the new class
+				t.generateReceipt(0.00, "End Session"); 
+				break;
+
+			case 4:
 				System.out.println("\nThank You for using this ATM. \nVISIT AGAIN!");
 				System.out.println("-------------------------------");
 				System.out.println("-------------------------------\n");
